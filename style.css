@@ -1,0 +1,190 @@
+:root {
+  --dark-green: #1f3d2b;
+  --olive-green: #2e4d3a;
+  --off-white: #f7f5f2;
+  --soft-beige: #e8e3dc;
+  --charcoal: #0f1412;
+  --text-muted: #6f6f6f;
+  --light-green: #3f6b55;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeUp { from { opacity: 0; transform: translateY(25px); } to { opacity: 1; transform: translateY(0); } }
+
+.animate-page { animation: fadeUp 1s ease forwards; }
+.animate-item { 
+  opacity: 0; 
+  transform: translateY(25px); 
+  animation: fadeUp 0.8s ease forwards; 
+}
+.animate-item[data-delay="0.2"] { animation-delay:0.2s; }
+.animate-item[data-delay="0.4"] { animation-delay:0.4s; }
+.animate-item[data-delay="0.6"] { animation-delay:0.6s; }
+.animate-item[data-delay="0.8"] { animation-delay:0.8s; }
+.animate-item[data-delay="1"] { animation-delay:1s; }
+.animate-item[data-delay="1.2"] { animation-delay:1.2s; }
+.animate-item[data-delay="1.4"] { animation-delay:1.4s; }
+.animate-item[data-delay="1.6"] { animation-delay:1.6s; }
+.animate-item[data-delay="1.8"] { animation-delay:1.8s; }
+
+/* ===== Body ===== */
+body {
+  font-family: 'Cairo', sans-serif;
+  background: linear-gradient(135deg, #0f1a14, #1a2b22);
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+h2.animate-name #guestName {
+  font-size: 1.6rem;
+}
+/* حجم اسم الضيف أكبر */
+#guestName {
+  font-size: 1.6rem; /* اختاري الحجم المناسب */
+  color: var(--light-green);
+  font-weight: 700;
+}
+#guestName {
+  font-size: 1.6rem !important;
+}
+
+
+
+
+.note {
+  margin-top: 25px;
+  text-align: center;
+  color: #777;
+  font-size: 0.9rem;
+}
+.prefix {
+  font-weight: 500;
+  color: var(--text-muted);
+  margin-left: 6px;
+  font-size: 1.1rem;
+}
+
+
+h2.animate-name {
+  color: var(--dark-green);
+  margin: 10px 0 18px;
+  font-weight: 700;
+  animation: fadeIn 1.2s ease forwards;
+  animation-delay: 0.6s;
+}
+
+/* ===== Card ===== */
+.rsvp-card {
+  width: 100%;
+  max-width: 900px;
+  background: var(--off-white);
+  margin: 0;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.4);
+}
+
+/* ===== Image ===== */
+/* ===== Image ===== */
+.image-side {
+  height: 260px;
+  overflow: hidden;
+  border-bottom-left-radius: 0; /* حاد من تحت */
+  border-bottom-right-radius: 0; /* حاد من تحت */
+}
+
+.image-side img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  filter: brightness(0.9) contrast(1.05);
+  border-bottom-left-radius: 0; /* حاد من تحت */
+  border-bottom-right-radius: 0; /* حاد من تحت */
+}
+
+/* ===== Content / Info Container ===== */
+.info-side {
+  padding: 40px 28px 60px;
+  position: relative;
+  background: #f2f0eb; /* أغمق شوي من الأبيض */
+  border-radius: 28px; /* حواف مقوسة خفيفة للفخامة */
+  margin-top: -40px; /* يعطي إحساس أن المحتوى فوق الصورة بشكل لطيف */
+  box-shadow: 0 20px 50px rgba(0,0,0,0.2); /* تعزيز الإحساس بالفخامة */
+}
+
+.info-side::before {
+  content:""; position:absolute; inset:0; background:url("floral-bg.png") center/cover no-repeat; opacity:0.06; pointer-events:none;
+}
+.info-side * { position: relative; z-index:1; }
+
+/* ===== Text ===== */
+h2 { color: var(--text-muted); font-size:1.8rem; margin-bottom:6px; }
+h1 { color: var(--dark-green); font-size:2.2rem; margin:10px 0 18px; }
+p { color:#555; line-height:1.7; }
+
+/* ===== Details ===== */
+.event-details { list-style:none; padding:0; margin:0 0 35px; }
+.event-details li { padding:6px 0; font-size:1rem; }
+
+/* ===== Buttons ===== */
+.rsvp-buttons { display:flex; flex-direction:column; gap:14px; margin-bottom:25px; }
+.rsvp-buttons button { padding:18px; font-size:1.1rem; border-radius:18px; border:none; cursor:pointer; font-weight:600; transition: all 0.3s ease; }
+#yesBtn { background: var(--dark-green); color:white; }
+#noBtn { background:transparent; color: var(--dark-green); border:1.5px solid var(--dark-green); }
+.rsvp-buttons button:hover { transform:translateY(-2px); }
+#noBtn:hover { background: var(--soft-beige); }
+
+/* ===== Location Link ===== */
+.location-link { text-align:center; margin:20px 0 10px; }
+.location-link a {
+  display:inline-block; background: var(--soft-beige); color: var(--dark-green);
+  padding:10px 18px; border-radius:14px; font-weight:600; text-decoration:none;
+  transition: all 0.3s ease; box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+}
+.location-link a:hover { background: var(--dark-green); color: var(--off-white); transform:translateY(-2px); }
+
+/* ===== Modal ===== */
+.modal { position: fixed; inset:0; background: rgba(0,0,0,0.55); backdrop-filter: blur(6px); display:flex; justify-content:center; align-items:center; z-index:999; }
+.modal.hidden { display:none; }
+.modal-box { background: var(--off-white); padding:35px 30px; border-radius:24px; width:85%; max-width:320px; text-align:center; animation: fadeUp 0.6s ease; }
+.modal-box h3 { color: var(--dark-green); margin-bottom:10px; }
+.modal-box button { background: var(--dark-green); color:white; border:none; padding:12px 28px; border-radius:14px; font-size:1rem; cursor:pointer; }
+
+/* ===== Progress ===== */
+.progress-overlay { position: fixed; inset:0; background: rgba(0,0,0,0.2); display:flex; justify-content:center; align-items:center; z-index:1000; visibility:hidden; }
+.progress-overlay.active { visibility:visible; }
+.progress-bar { width:250px; height:12px; background:#e8e3dc; border-radius:10px; overflow:hidden; }
+.progress-bar-inner { height:100%; width:0%; background: var(--dark-green); border-radius:10px; transition: width 1.5s ease; }
+
+/* ===== Responsive ===== */
+@media(max-width:768px){
+  .rsvp-card{ flex-direction:column; }
+  .image-side{ width:100%; height:220px; }
+  .info-side{ padding:35px 25px; }
+  h1{ font-size:1.8rem; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

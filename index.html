@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>دعوة حفل تخرج د.أفنان</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- أيقونة التاب -->
+  <link rel="icon" href="grad.png" type="image/png">
+</head>
+
+<body>
+
+  <div class="rsvp-card animate-page">
+
+    <!-- Image / Hero -->
+
+
+    <!-- Info -->
+  <div class="image-side">
+    <img src="flowers.png" alt="Background">
+  </div>
+
+    <div class="info-side">
+
+      <h4 class="animate-item" data-delay="0.2">حياك الله</h4>
+
+      <h2 class="animate-item" data-delay="0.4">
+        <span class="prefix">الغالية:</span>
+        <span id="guestName">Guest</span>
+        <span>🤍</span>
+      </h2>
+
+
+      <p class="animate-item" data-delay="0.6">نتشرف بدعوتك لحضور حفل تخرج</p>
+
+      <h1 class="animate-item" data-delay="0.8">د. أفنان</h1>
+
+      <p class="animate-item" data-delay="1">بمناسبة حصولها على درجة الدكتوراه</p>
+
+      <ul class="event-details animate-item" data-delay="1.2">
+        <li>📅 الجمعة 23 يناير 2026</li>
+        <li>📍 منتجع مرلين- رقم 2</li>
+        <li>🕢 الاستقبال 7:30 مساءً</li>
+        <li>🍽️ العشاء 10:00 مساءً</li>
+      </ul>
+
+      <div class="rsvp-buttons animate-item" data-delay="1.4">
+        <button id="yesBtn">قبول</button>
+        <button id="noBtn">اعتذار</button>
+      </div>
+
+      <div class="location-link animate-item" data-delay="1.6">
+        <a href="https://maps.app.goo.gl/C5fjyE68ih7i8LQw6" target="_blank">
+          📍 منتجع مرلين - اضغط هنا لعرض موقع الحفل
+        </a>
+      </div>
+
+      <p class="note animate-item" data-delay="1.8">⁠بحضوركم تكتمل أفراحنا</p>
+      <p class="note animate-item" data-delay="1.8">⁠♡</p>
+
+
+    </div>
+
+  </div>
+
+  <!-- Modal -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-box">
+      <h3 id="modalTitle"></h3>
+      <p id="modalText"></p>
+      <button onclick="closeModal()">حسنًا</button>
+    </div>
+  </div>
+
+  <!-- Progress Overlay -->
+  <div id="progress" class="progress-overlay">
+    <div class="progress-bar">
+      <div class="progress-bar-inner"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

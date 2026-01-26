@@ -4,7 +4,7 @@ const guest = params.get("guest") || "ضيفتنا الكريمة";
 document.getElementById("guestName").innerText = guest;
 
 // Google Apps Script Web App
-const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbz2rhHlUW2vqHVfv6Iw3_bJVQM_d3lEC6Ba4g9HRSKSJaTL-Pi4XflJUwCqm5bScP04/exec";
+const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbyl6bD9p56Cjwah8_kpEp-FOplsp6QNmas1_qn0p-cI5c0x4hR2GHTK9LxbpJM2haeo/exec";
 
 // Modal helpers
 function showModal(title, text) {
@@ -52,6 +52,7 @@ function sendRSVP(choice) {
 // Button listeners
 document.getElementById("yesBtn").addEventListener("click", () => sendRSVP("قبول"));
 document.getElementById("noBtn").addEventListener("click", () => sendRSVP("اعتذار"));
+
 
 
 

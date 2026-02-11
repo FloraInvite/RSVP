@@ -167,30 +167,31 @@ p { color:#555; line-height:1.7; }
 
 /* ===== Guest Name Input ===== */
 .guest-input {
-  margin: 25px 0 35px;
-  text-align: right;
+  margin: 22px 0 32px;
 }
 
 .guest-input label {
   display: block;
-  margin-bottom: 8px;
-  font-size: 0.95rem;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
   color: var(--text-muted);
   font-weight: 600;
 }
 
+/* نفس عرض الأزرار */
 .guest-input input {
   width: 100%;
-  padding: 14px 16px;
+  padding: 12px 16px;            /* أنحف من الأزرار */
   font-size: 1rem;
   font-family: 'Cairo', sans-serif;
-  border-radius: 16px;
+  border-radius: 18px;           /* نفس انحناء الأزرار */
   border: 1.5px solid var(--primary-soft);
   background: var(--off-white);
   color: var(--charcoal);
   outline: none;
   transition: all 0.3s ease;
   box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  box-sizing: border-box;        /* ⭐ هذا يحل مشكلة الزيادة */
 }
 
 .guest-input input::placeholder {
@@ -202,6 +203,8 @@ p { color:#555; line-height:1.7; }
   box-shadow: 0 8px 22px rgba(231,181,164,0.45);
   background: white;
 }
+
+
 
 
 

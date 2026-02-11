@@ -205,6 +205,39 @@ p { color:#555; line-height:1.7; }
   background: white;
 }
 
+/* ===== Footer ===== */
+.footer {
+  text-align: center;
+  margin: 35px 0 20px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.footer strong {
+  color: var(--primary-dark);
+}
+
+.footer a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  color: var(--primary-dark);
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.footer a img {
+  width: 18px;
+  height: 18px;
+}
+
+.footer a:hover {
+  color: var(--primary);
+  transform: translateY(-2px);
+}
+
+
 
 
 

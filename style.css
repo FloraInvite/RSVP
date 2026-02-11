@@ -1,11 +1,11 @@
 :root {
-  --dark-green: #1f3d2b;
-  --olive-green: #2e4d3a;
-  --off-white: #f7f5f2;
-  --soft-beige: #e8e3dc;
-  --charcoal: #0f1412;
-  --text-muted: #6f6f6f;
-  --light-green: #3f6b55;
+  --primary: #e8b5a4;        /* اللون الأساسي */
+  --primary-dark: #d79f8c;   /* أغمق شوي */
+  --primary-soft: #f3d1c6;   /* فاتح */
+  --off-white: #f9f6f4;
+  --soft-beige: #f1e3dd;
+  --charcoal: #3a2f2b;
+  --text-muted: #8a6f66;
 }
 
 /* ===== Animations ===== */
@@ -42,8 +42,8 @@ h2.animate-name #guestName {
 }
 /* حجم اسم الضيف أكبر */
 #guestName {
-  font-size: 1.6rem; /* اختاري الحجم المناسب */
-  color: var(--light-green);
+  font-size: 1.6rem;
+  color: var(--primary-dark);
   font-weight: 700;
 }
 #guestName {
@@ -68,7 +68,7 @@ h2.animate-name #guestName {
 
 
 h2.animate-name {
-  color: var(--dark-green);
+  color: var(--primary-dark);
   margin: 10px 0 18px;
   font-weight: 700;
   animation: fadeIn 1.2s ease forwards;
@@ -120,7 +120,7 @@ h2.animate-name {
 
 /* ===== Text ===== */
 h2 { color: var(--text-muted); font-size:1.8rem; margin-bottom:6px; }
-h1 { color: var(--dark-green); font-size:2.2rem; margin:10px 0 18px; }
+h1 { color: var(--primary-dark); font-size:2.2rem; margin:10px 0 18px; }
 p { color:#555; line-height:1.7; }
 
 /* ===== Details ===== */
@@ -130,32 +130,32 @@ p { color:#555; line-height:1.7; }
 /* ===== Buttons ===== */
 .rsvp-buttons { display:flex; flex-direction:column; gap:14px; margin-bottom:25px; }
 .rsvp-buttons button { padding:18px; font-size:1.1rem; border-radius:18px; border:none; cursor:pointer; font-weight:600; transition: all 0.3s ease; }
-#yesBtn { background: var(--dark-green); color:white; }
-#noBtn { background:transparent; color: var(--dark-green); border:1.5px solid var(--dark-green); }
+#yesBtn { background: var(--primary-dark); color:white; }
+#noBtn { background:transparent; color: var(--primary-dark); border:1.5px solid var(--primary-dark); }
 .rsvp-buttons button:hover { transform:translateY(-2px); }
 #noBtn:hover { background: var(--soft-beige); }
 
 /* ===== Location Link ===== */
 .location-link { text-align:center; margin:20px 0 10px; }
 .location-link a {
-  display:inline-block; background: var(--soft-beige); color: var(--dark-green);
+  display:inline-block; background: var(--soft-beige); color: var(--primary-dark);
   padding:10px 18px; border-radius:14px; font-weight:600; text-decoration:none;
   transition: all 0.3s ease; box-shadow: 0 6px 15px rgba(0,0,0,0.25);
 }
-.location-link a:hover { background: var(--dark-green); color: var(--off-white); transform:translateY(-2px); }
+.location-link a:hover { background: var(--primary-dark); color: var(--off-white); transform:translateY(-2px); }
 
 /* ===== Modal ===== */
 .modal { position: fixed; inset:0; background: rgba(0,0,0,0.55); backdrop-filter: blur(6px); display:flex; justify-content:center; align-items:center; z-index:999; }
 .modal.hidden { display:none; }
 .modal-box { background: var(--off-white); padding:35px 30px; border-radius:24px; width:85%; max-width:320px; text-align:center; animation: fadeUp 0.6s ease; }
-.modal-box h3 { color: var(--dark-green); margin-bottom:10px; }
-.modal-box button { background: var(--dark-green); color:white; border:none; padding:12px 28px; border-radius:14px; font-size:1rem; cursor:pointer; }
+.modal-box h3 { color: var(--primary-dark); margin-bottom:10px; }
+.modal-box button { background: var(--primary-dark); color:white; border:none; padding:12px 28px; border-radius:14px; font-size:1rem; cursor:pointer; }
 
 /* ===== Progress ===== */
 .progress-overlay { position: fixed; inset:0; background: rgba(0,0,0,0.2); display:flex; justify-content:center; align-items:center; z-index:1000; visibility:hidden; }
 .progress-overlay.active { visibility:visible; }
 .progress-bar { width:250px; height:12px; background:#e8e3dc; border-radius:10px; overflow:hidden; }
-.progress-bar-inner { height:100%; width:0%; background: var(--dark-green); border-radius:10px; transition: width 1.5s ease; }
+.progress-bar-inner { height:100%; width:0%; background: var(--primary-dark); border-radius:10px; transition: width 1.5s ease; }
 
 /* ===== Responsive ===== */
 @media(max-width:768px){
@@ -164,6 +164,7 @@ p { color:#555; line-height:1.7; }
   .info-side{ padding:35px 25px; }
   h1{ font-size:1.8rem; }
 }
+
 
 
 

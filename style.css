@@ -206,12 +206,17 @@ p { color:#555; line-height:1.7; }
 }
 
 /* ===== Footer with Icon ===== */
+/* ===== Footer with Icon (Centered Fix) ===== */
 .footer {
-  text-align: center;
+  text-align: center;              /* يضمن كل شيء في الوسط */
   margin: 25px 0 15px;
-  font-size: 0.8rem;             /* صغير ومناسب */
+  font-size: 0.8rem;
   color: var(--text-muted);
   font-weight: 400;
+  display: flex;
+  flex-direction: column;          /* سطر فوق وسطر تحت */
+  align-items: center;             /* يجعل كل شيء في المنتصف */
+  gap: 4px;                        /* مسافة بين الأسطر */
 }
 
 .footer strong {
@@ -222,7 +227,7 @@ p { color:#555; line-height:1.7; }
 .footer a {
   display: inline-flex;
   align-items: center;
-  gap: 6px;                       /* مسافة بين الأيقونة والنص */
+  gap: 6px;                        /* المسافة بين الأيقونة والنص */
   color: var(--primary-dark);
   text-decoration: none;
   transition: all 0.3s ease;
@@ -238,6 +243,8 @@ p { color:#555; line-height:1.7; }
   width: 16px;                     /* صغير */
   height: 16px;
 }
+
+
 
 
 

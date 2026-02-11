@@ -31,6 +31,9 @@ function disableButtons() {
 
 // Send RSVP with progress animation
 function sendRSVP(choice) {
+  const guestInput = document.getElementById("guestInput");
+  guest = guestInput.value.trim();
+
   if (!guest) {
     showModal("تنبيه", "فضلاً أدخلي الاسم الكريم قبل تسجيل الرد");
     return;
@@ -51,9 +54,13 @@ function sendRSVP(choice) {
     fetch(WEB_APP_URL, { method: "POST", body: formData })
       .then(() => {
         progress.classList.remove("active");
-        showModal("تم تسجيل ردك 🌿", `شكرًا لك ${guest}، تم تسجيل ردك: ${choice}`);
+        showModal(
+          "تم تسجيل ردك 🌿",
+          `شكرًا لك ${guest}، تم تسجيل ردك: ${choice}`
+        );
         disableButtons();
       })
+
       .catch(() => {
         progress.classList.remove("active");
         showModal("حدث خطأ", "لم نتمكن من تسجيل ردك، الرجاء المحاولة لاحقًا");
@@ -64,6 +71,7 @@ function sendRSVP(choice) {
 // Button listeners
 document.getElementById("yesBtn").addEventListener("click", () => sendRSVP("قبول"));
 document.getElementById("noBtn").addEventListener("click", () => sendRSVP("اعتذار"));
+
 
 
 

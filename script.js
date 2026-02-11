@@ -1,10 +1,17 @@
-// Guest name from URL
-const params = new URLSearchParams(window.location.search);
-const guest = params.get("guest") || "ضيفتنا الكريمة";
-document.getElementById("guestName").innerText = guest;
+
 
 // Google Apps Script Web App
 const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbyl6bD9p56Cjwah8_kpEp-FOplsp6QNmas1_qn0p-cI5c0x4hR2GHTK9LxbpJM2haeo/exec";
+let guest = "";
+
+const guestInput = document.getElementById("guestInput");
+const guestNameSpan = document.getElementById("guestName");
+
+guestInput.addEventListener("input", () => {
+  guest = guestInput.value.trim();
+  guestNameSpan.innerText = guest || "";
+});
+
 
 // Modal helpers
 function showModal(title, text) {
@@ -24,6 +31,11 @@ function disableButtons() {
 
 // Send RSVP with progress animation
 function sendRSVP(choice) {
+  if (!guest) {
+    showModal("تنبيه", "فضلاً أدخلي الاسم الكريم قبل تسجيل الرد");
+    return;
+  }
+
   const progress = document.getElementById("progress");
   const bar = progress.querySelector(".progress-bar-inner");
 
@@ -52,6 +64,7 @@ function sendRSVP(choice) {
 // Button listeners
 document.getElementById("yesBtn").addEventListener("click", () => sendRSVP("قبول"));
 document.getElementById("noBtn").addEventListener("click", () => sendRSVP("اعتذار"));
+
 
 
 

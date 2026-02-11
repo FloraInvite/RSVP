@@ -205,37 +205,41 @@ p { color:#555; line-height:1.7; }
   background: white;
 }
 
-/* ===== Footer ===== */
+/* ===== Footer with Icon ===== */
 .footer {
   text-align: center;
-  margin: 35px 0 20px;
-  font-size: 0.9rem;
+  margin: 25px 0 15px;
+  font-size: 0.8rem;             /* صغير ومناسب */
   color: var(--text-muted);
+  font-weight: 400;
 }
 
 .footer strong {
   color: var(--primary-dark);
+  font-weight: 600;
 }
 
 .footer a {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  text-decoration: none;
+  gap: 6px;                       /* مسافة بين الأيقونة والنص */
   color: var(--primary-dark);
-  font-weight: 600;
+  text-decoration: none;
   transition: all 0.3s ease;
-}
-
-.footer a img {
-  width: 18px;
-  height: 18px;
+  font-weight: 500;
 }
 
 .footer a:hover {
   color: var(--primary);
-  transform: translateY(-2px);
+  transform: translateY(-1px);
 }
+
+.footer-icon {
+  width: 16px;                     /* صغير */
+  height: 16px;
+}
+
+
 
 
 

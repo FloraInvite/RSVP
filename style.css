@@ -206,19 +206,12 @@ p { color:#555; line-height:1.7; }
 }
 
 .footer {
-  text-align: center;               /* يضمن كل شيء في الوسط */
-  margin: 25px 0 15px;
-  font-size: 0.8rem;
-  color: var(--text-muted);
-  display: flex;
-  flex-direction: column;           /* سطر فوق وسطر تحت */
-  align-items: center;              /* كل شيء في المنتصف */
-  gap: 4px;
+  max-width: 900px; /* same as .rsvp-card */
   width: 100%;
-  max-width: 300px;                 /* يحافظ على عرض مناسب للجوال */
-  margin-left: auto;                /* يضمن محاذاة وسط */
-  margin-right: auto;
+  margin: 25px auto 15px;
+  text-align: center;
 }
+
 
 .footer strong {
   color: var(--primary-dark);
@@ -244,6 +237,7 @@ p { color:#555; line-height:1.7; }
   width: 16px;
   height: 16px;
 }
+
 
 
 
